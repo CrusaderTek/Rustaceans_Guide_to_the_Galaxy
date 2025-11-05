@@ -1,7 +1,22 @@
 Most of this folder was taken from https://github.com/emilk/egui/tree/main/examples/hello_android
 There are some edits by me.
 
-Hello world example for Android.
+# STEP 1
+complete the prerequisits for Android Studio sdk and ndk
+https://github.com/CrusaderTek/Rustaceans_Guide_to_the_Galaxy/blob/main/prerequisits/prerequisites.md
+
+The following are required files for Cargo APK to build your android APK file. You must change the Path to where your files are on your system.
+
+```sh
+export ANDROID_HOME=/PATH/TO/YOUR/SDK/DIRECTORY
+```
+
+```sh
+export NDK_HOME=/PATH/TO/YOUR/NDK/DIRECTORY
+```
+on my ubuntu machine these files are located at /usr/lib/android-sdk/ and /usr/lib/android-sdk/android-ndk-r25b
+
+# STEP 2 : Hello world example for Android.
 
 Use `cargo-apk` to build and run. Requires a patch to workaround [an upstream bug](https://github.com/rust-mobile/cargo-subcommand/issues/29).
 
