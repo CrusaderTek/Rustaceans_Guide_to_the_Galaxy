@@ -29,7 +29,7 @@ sudo snap install androidsdk
 
 Once you have the sdk you can use the commandline tools to get versions of the sdk that you need. INFO: https://developer.android.com/tools#environment-variables
 
-navigate to your sdk directory and navigate to the bin directory and run this code to add android-35 required by the egui example.
+navigate to your sdk directory and navigate to the bin directory (android-sdk/cmdline-tools/11.0/bin )and run this code to add android-35 required by the egui example.
 ```sh
 ./sdkmanager "platforms;android-35"
 ```
@@ -39,11 +39,12 @@ sdkmanager "platforms;android-35"
 ```
 if you run into issues running/compiling once then failing on subsequent runs you may need to change permissions in the sdk directory. Sometimes the files can be owned by root on linux. (look into CHMOD and CHOWN commands if you are unfamiliar)
 
+The SDK should come with NDK in the NDK folder. if not get it here:
 Download and extract your NDK of choice from https://developer.android.com/ndk/downloads/
 I placed this folder inside my sdk folder for ease of use.
 I recommend getting the LTS (long term stable) version but I have tested most examples with android-ndk-r25b.
 
-*you will have to run these commands alot throughout your Journey through the Galaxy so might as well add them to .bashrc or PATH or your startup script of choice. remember to change the path to your sdk and ndk directories
+*you will have to run these commands alot throughout your Journey through the Galaxy so might as well add them to .bashrc or PATH or your startup script of choice. remember to change the path to your sdk and ndk directories!
 ```sh
 export ANDROID_HOME=/PATH/TO/YOUR/SDK/DIRECTORY
 ```
