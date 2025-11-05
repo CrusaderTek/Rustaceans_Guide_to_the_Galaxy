@@ -1,11 +1,24 @@
 **Most of this assumes you are developing on an debian based linux distro(...probably ubuntu). (I may get around to writing windows commands later... just use linux its much easier)
 
 //TODO
-INSTALL RUST
-CARGO android build tools (cargo_apk, cargo_mobie2, xbuild, cargo-ndk)
+android build tools (cargo_apk, cargo_mobie2, xbuild, cargo-ndk)
 Optional:
 INSTALL HELIX
 //TODO
+
+# Install Rust
+Rust install script from rust programming language website: https://rust-lang.org/tools/install/
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+From the above website: 
+Configuring the PATH environment variable
+
+In the Rust development environment, all tools are installed to the ~/.cargo/bin directory, and this is where you will find the Rust toolchain, including rustc, cargo, and rustup.
+
+Accordingly, it is customary for Rust developers to include this directory in their PATH environment variable. During installation rustup will attempt to configure the PATH. Because of differences between platforms, command shells, and bugs in rustup, the modifications to PATH may not take effect until the CONSOLE IS RESTARTED, or the user is logged out, or it may not succeed at all.
+
+If, after installation, running rustc --version in the console fails, this is the most likely reason. 
 
 # Enable Developer Options on your Android device
 This will enable you to run apps directly on your android device while testing with "Cargo apk run --lib" (or "Cargo Android run" if using cargo_mobile2"
