@@ -1,5 +1,12 @@
 **Most of this assumes you are developing on an debian based linux distro(...probably ubuntu). (I may get around to writing windows commands later... just use linux its much easier)
 
+//TODO
+INSTALL RUST
+CARGO android build tools (cargo_apk, cargo_mobie2, xbuild, cargo-ndk)
+Optional:
+INSTALL HELIX
+//TODO
+
 # Enable Developer Options on your Android device
 This will enable you to run apps directly on your android device while testing with "Cargo apk run --lib" (or "Cargo Android run" if using cargo_mobile2"
 
