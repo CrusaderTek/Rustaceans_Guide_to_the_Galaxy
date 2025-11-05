@@ -1,4 +1,5 @@
-# Complete the Prerequisites:
+# Complete the Prerequisites
+https://github.com/CrusaderTek/Rustaceans_Guide_to_the_Galaxy/blob/main/prerequisits/prerequisites.md
 
 # Intstall cargo_mobile2
 ```sh
