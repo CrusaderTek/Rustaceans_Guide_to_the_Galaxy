@@ -18,8 +18,8 @@ Build and run:
 
 ```sh
 # Run on android
-cargo apk run -p hello_android --lib
+cargo apk run --lib
 
 # Run on your desktop
-cargo run -p hello_android
+cargo run 
 ```
