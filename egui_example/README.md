@@ -17,10 +17,11 @@ export NDK_HOME=/PATH/TO/YOUR/NDK/DIRECTORY
 on my ubuntu machine these files are located at /usr/lib/android-sdk/ and /usr/lib/android-sdk/android-ndk-r25b
 
 # STEP 2 : Hello world example for Android.
+Either clone this repo with git and cd to egui_example OR download the src directory and Cargo.toml and copy into an existing cargo project.
 
 Use `cargo-apk` to build and run. Requires a patch to workaround [an upstream bug](https://github.com/rust-mobile/cargo-subcommand/issues/29).
 
-One-time setup:
+One-time setup: (*This must be done in each project)
 
 ```sh
 cargo install \
