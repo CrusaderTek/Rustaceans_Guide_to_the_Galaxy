@@ -36,6 +36,4 @@ Build and run:
 # Run on android
 cargo apk run --lib
 
-# Run on your desktop
-cargo run 
 ```
