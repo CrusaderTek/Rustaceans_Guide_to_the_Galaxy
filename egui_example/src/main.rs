@@ -1,4 +1,4 @@
-use hello_android::MyApp;
+use egui_example::MyApp;
 
 // mod perm;
 
