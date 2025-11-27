@@ -1,0 +1,54 @@
+[package]
+name = "droid_ext_bin"
+version = "0.1.0"
+authors = ["Caleb Sattler"]
+license = "MIT OR Apache-2.0"
+edition = "2024"
+rust-version = "1.88"
+publish = false
+
+# `unsafe_code` is required for `#[no_mangle]`, disable workspace lints to workaround lint error.
+#[lints]
+#workspace = true
+
+[lib]
+# cdylib is required for Android, lib is required for desktop
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+android_logger = "0.15.1"
+eframe = { version = "0.33.0",default-features = false, features = [
+  "default_fonts",
+  "glow",
+  "android-native-activity",
+]  }
+egui_demo_lib = { version = "0.33.0", features = ["chrono"] }
+egui_extras = {version = "0.33.0", features = ["default", "image"]}
+log = "0.4.28"
+winit = "0.30.12"
+
+#Cargo apk data
+[package.metadata.android]
+build_targets = ["armv7-linux-androideabi", "aarch64-linux-android"]
+
+#The following permissions can be turned on from the settings/permissions in android. You can have as many uses_permission entries as needed for you app. these are for accessing data and files that are not located in your com.example.<your_app> folder.
+[[package.metadata.android.uses_permission]]
+name = "android.permission.MANAGE_EXTERNAL_STORAGE"
+[[package.metadata.android.uses_permission]]
+name = "android.permission.READ_EXTERNAL_STORAGE"
+[[package.metadata.android.uses_permission]]
+name = "android.permission.WRITE_EXTERNAL_STORAGE"
+[[package.metadata.android.uses_permission]]
+name = "com.termux.permission.RUN_COMMAND"
+[[package.metadata.android.uses_permission]]
+name = "android.permission.CAMERA"
+[[package.metadata.android.uses_permission]]
+name = "android.permission.INTERNET"
+
+[package.metadata.android.sdk]
+min_sdk_version = 23
+target_sdk_version = 35
+
+# [package.metadata.android.application.activity]
+# window_soft_input_mode = "stateAlwaysVisable"
+# config_changes = "orientation|keyboard|screenSize"
